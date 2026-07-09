@@ -74,9 +74,33 @@ body{
     align-items:center;
     z-index:1000;
 }
-.logo,.nav-register{
-    color:var(--text);
+.logo,
+.nav-register{
+
     text-decoration:none;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+
+}
+
+.logo-image{
+
+    height:28px;
+    width:auto;
+    display:block;
+
+}
+
+.nav-register{
+
+    color:var(--text);
+
+}
 }
 .nav-register{
     position:relative;
