@@ -1,0 +1,971 @@
+/* ===========================================================
+   CAAMP — THE SUMMER CHALLENGE
+   VERSION 1.1
+=========================================================== */
+
+/* FONTS */
+@font-face{
+    font-family:"Hoves";
+    src:url("assets/fonts/TT Hoves Pro Trial Regular.ttf");
+    font-weight:400;
+}
+@font-face{
+    font-family:"Hoves";
+    src:url("assets/fonts/TT Hoves Pro Trial Medium.ttf");
+    font-weight:500;
+}
+@font-face{
+    font-family:"Hoves";
+    src:url("assets/fonts/TT Hoves Pro Trial DemiBold.ttf");
+    font-weight:600;
+}
+@font-face{
+    font-family:"Hoves Expanded";
+    src:url("assets/fonts/TT Hoves Pro Trial Expanded Light.ttf");
+    font-weight:300;
+}
+@font-face{
+    font-family:"Hoves Expanded";
+    src:url("assets/fonts/TT Hoves Pro Trial Expanded Black.ttf");
+    font-weight:900;
+}
+
+/* VARIABLES */
+:root{
+    --cream:#F9F2EB;
+    --white:#fff;
+    --terracotta:#C65B40;
+    --coral:#EA8C72;
+    --sand:#F4D6BF;
+    --text:#302824;
+    --radius:999px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    font-family:"Hoves",sans-serif;
+    color:var(--text);
+    background:var(--cream);
+    overflow-x:hidden;
+}
+
+/* BACKGROUND */
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:
+    radial-gradient(circle at 15% 10%,rgba(234,140,114,.45),transparent 35%),
+    radial-gradient(circle at 90% 15%,rgba(198,91,64,.28),transparent 28%),
+    radial-gradient(circle at 50% 85%,rgba(244,214,191,.75),transparent 40%),
+    linear-gradient(180deg,#FFF9F4,#F9EFE7,#F7E4D7);
+}
+
+/* NAVBAR */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:32px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+.logo,.nav-register{
+    color:var(--text);
+    text-decoration:none;
+}
+.nav-register{
+    position:relative;
+}
+.nav-register::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:1px;
+    background:var(--text);
+    transition:.3s;
+}
+.nav-register:hover::after{width:100%}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    padding:120px 30px;
+}
+.hero-wrapper{
+    max-width:900px;
+    text-align:center;
+}
+.hero-cherries{
+    width:130px;
+    margin-bottom:30px;
+    animation:float 5s ease-in-out infinite;
+}
+.hero-edition{
+    display:block;
+    margin-bottom:22px;
+    font-family:"Hoves Expanded";
+    letter-spacing:6px;
+    font-size:.8rem;
+    color:var(--terracotta);
+}
+.hero-title{
+    font-family:"Hoves Expanded";
+    font-weight:900;
+    font-size:clamp(5rem,11vw,9rem);
+    line-height:.88;
+    letter-spacing:-5px;
+    margin-bottom:30px;
+}
+.hero-description{
+    max-width:500px;
+    margin:0 auto 12px;
+    line-height:1.7;
+}
+.hero-dates{
+    opacity:.6;
+    margin-bottom:34px;
+}
+.hero-cta{
+    display:inline-flex;
+    gap:10px;
+    align-items:center;
+    text-decoration:none;
+    color:var(--white);
+    background:var(--terracotta);
+    padding:18px 34px;
+    border-radius:999px;
+}
+.scroll-indicator{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    opacity:.5;
+}
+
+/* INTRO */
+.intro{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:8rem 2rem;
+}
+.story-card{
+    text-align:center;
+    max-width:800px;
+}
+.story-number{
+    display:block;
+    font-family:"Hoves Expanded";
+    font-size:clamp(7rem,18vw,13rem);
+    color:var(--terracotta);
+    line-height:.9;
+}
+.story-heading{
+    font-family:"Hoves Expanded";
+    font-size:clamp(3rem,9vw,6rem);
+    margin-bottom:24px;
+}
+.story-copy{
+    max-width:520px;
+    margin:auto;
+    line-height:1.8;
+    opacity:.75;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+}
+
+@media (min-width:900px){
+    .navbar{padding:42px 70px}
+    .hero-cherries{width:150px}
+}
+
+@media (max-width:768px){
+    .hero-title{font-size:4.4rem}
+    .story-heading{font-size:3rem}
+    .story-copy{font-size:1rem}
+}
+/*==========================
+INTRO
+==========================*/
+
+.intro{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+padding:120px 32px;
+
+overflow:hidden;
+
+}
+
+.intro-content{
+
+max-width:900px;
+
+text-align:center;
+
+z-index:2;
+
+}
+
+.eyebrow{
+
+display:block;
+
+font-family:"Hoves Expanded";
+
+letter-spacing:8px;
+
+font-size:.8rem;
+
+margin-bottom:28px;
+
+color:var(--terracotta);
+
+}
+
+.intro h2{
+
+font-family:"Hoves Expanded";
+
+font-size:clamp(6rem,16vw,12rem);
+
+line-height:.86;
+
+letter-spacing:-6px;
+
+margin-bottom:26px;
+
+}
+
+.intro p{
+
+max-width:520px;
+
+margin:auto;
+
+font-size:1.15rem;
+
+line-height:1.9;
+
+opacity:.75;
+
+}
+
+.flower{
+
+position:absolute;
+
+left:-120px;
+
+bottom:40px;
+
+width:340px;
+
+opacity:.22;
+
+}
+
+.sun{
+
+position:absolute;
+
+right:-140px;
+
+top:80px;
+
+width:260px;
+
+opacity:.18;
+
+}
+
+/*==================================================
+NUMBERS
+==================================================*/
+
+.numbers{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.number-panel{
+
+position:relative;
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:120px 30px;
+
+overflow:hidden;
+
+}
+
+.number-content{
+
+max-width:760px;
+
+text-align:center;
+
+z-index:2;
+
+}
+
+.number-value{
+
+display:block;
+
+font-family:"Hoves Expanded";
+
+font-size:clamp(6rem,18vw,13rem);
+
+line-height:.8;
+
+color:var(--terracotta);
+
+margin-bottom:8px;
+
+}
+
+.number-panel h2{
+
+font-family:"Hoves Expanded";
+
+font-size:clamp(3rem,9vw,6rem);
+
+letter-spacing:-3px;
+
+margin-bottom:28px;
+
+}
+
+.number-panel p{
+
+max-width:520px;
+
+margin:auto;
+
+line-height:1.9;
+
+font-size:1.1rem;
+
+opacity:.75;
+
+}
+
+.number-decoration{
+
+position:absolute;
+
+pointer-events:none;
+
+opacity:.18;
+
+}
+
+.flower-decoration{
+
+width:340px;
+
+left:-120px;
+
+bottom:50px;
+
+}
+
+.sun-decoration{
+
+width:280px;
+
+right:-120px;
+
+top:70px;
+
+}
+
+.palm-decoration{
+
+width:360px;
+
+left:-150px;
+
+bottom:20px;
+
+}
+
+@media(max-width:768px){
+
+.number-panel{
+
+padding:100px 28px;
+
+}
+
+.number-value{
+
+font-size:5.8rem;
+
+}
+
+.number-panel h2{
+
+font-size:3rem;
+
+}
+
+.number-panel p{
+
+font-size:1rem;
+
+}
+
+.flower-decoration{
+
+width:220px;
+
+left:-90px;
+
+}
+
+.sun-decoration{
+
+width:180px;
+
+right:-70px;
+
+}
+
+.palm-decoration{
+
+width:240px;
+
+left:-90px;
+
+}
+
+}
+
+/*==============================
+NAVBAR GLASS
+==============================*/
+
+.navbar{
+
+transition:.35s;
+
+}
+
+
+/*==============================
+SMOOTH
+==============================*/
+
+html{
+
+scroll-behavior:auto;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+}
+
+
+/*==============================
+GPU
+==============================*/
+
+.hero-cherries,
+
+.number-decoration{
+
+will-change:transform;
+
+}
+.background{
+
+will-change:transform;
+
+}
+
+.hero-wrapper{
+
+will-change:transform;
+
+transform-origin:center;
+
+}
+
+/*==================================================
+HOW IT WORKS
+==================================================*/
+
+.how{
+
+    padding:0;
+
+}
+
+.how-intro{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:0 32px;
+
+}
+
+.how-intro h2{
+
+    font-family:"Hoves Expanded";
+
+    font-size:clamp(4rem,11vw,8rem);
+
+    line-height:.88;
+
+    letter-spacing:-5px;
+
+}
+
+.step{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:60px 32px;
+
+    border-top:1px solid rgba(0,0,0,.08);
+
+    position:relative;
+
+}
+
+.step-number{
+
+    font-family:"Hoves Expanded";
+
+    font-size:clamp(5rem,12vw,8rem);
+
+    color:var(--terracotta);
+
+    margin-bottom:18px;
+
+}
+
+.step h3{
+
+    font-family:"Hoves Expanded";
+
+    font-size:clamp(2.5rem,7vw,4rem);
+
+    margin-bottom:24px;
+
+    letter-spacing:-2px;
+
+}
+
+.step p{
+
+    max-width:520px;
+
+    margin:auto;
+
+    line-height:1.9;
+
+    font-size:1.05rem;
+
+    opacity:.75;
+
+}
+
+/*==================================================
+THE EXPERIENCE
+==================================================*/
+
+.how{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    padding:120px 40px;
+
+}
+
+.experience-intro{
+
+    max-width:1100px;
+
+    text-align:center;
+
+    z-index:2;
+
+}
+
+.experience-eyebrow{
+
+    display:inline-block;
+
+    font-size:.85rem;
+
+    letter-spacing:8px;
+
+    color:var(--terracotta);
+
+    text-transform:uppercase;
+
+    margin-bottom:32px;
+
+    opacity:.85;
+
+}
+
+.experience-title{
+
+    font-family:"Hoves Expanded";
+
+    font-weight:900;
+
+    font-size:clamp(4rem,9vw,8rem);
+
+    line-height:.9;
+
+    letter-spacing:-5px;
+
+    color:var(--text);
+
+    margin-bottom:40px;
+
+}
+
+.experience-text{
+
+    max-width:620px;
+
+    margin:auto;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    opacity:.75;
+
+}
+
+.experience-seal{
+
+    width:130px;
+
+    opacity:.18;
+
+    margin-bottom:30px;
+
+}
+
+/*==========================================
+STEP SCENE
+==========================================*/
+
+.step-scene{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    padding:40px;
+
+}
+
+.step-big-number{
+
+    font-family:"Hoves Expanded";
+
+    font-size:clamp(9rem,24vw,22rem);
+
+    line-height:.8;
+
+    color:var(--terracotta);
+
+    opacity:.92;
+
+}
+
+.step-title{
+
+    font-family:"Hoves Expanded";
+
+    font-size:clamp(3rem,7vw,5rem);
+
+    letter-spacing:-3px;
+
+    margin-top:-25px;
+
+    margin-bottom:28px;
+
+}
+
+.step-copy{
+
+    max-width:520px;
+
+    font-size:1.1rem;
+
+    line-height:1.9;
+
+    opacity:.75;
+
+}
+
+.step-flower{
+
+    position:absolute;
+
+    width:520px;
+
+    left:-170px;
+
+    bottom:-170px;
+
+    opacity:.14;
+
+    pointer-events:none;
+
+}
+
+/*==========================================
+STEP DECORATIONS
+==========================================*/
+
+.step-sun{
+
+    position:absolute;
+
+    width:430px;
+
+    right:-140px;
+
+    top:-90px;
+
+    opacity:.14;
+
+    pointer-events:none;
+
+}
+
+.step-cherries{
+
+    position:absolute;
+
+    width:320px;
+
+    right:-80px;
+
+    top:80px;
+
+    opacity:.18;
+
+    pointer-events:none;
+
+}
+
+@media(max-width:768px){
+
+.step-sun{
+
+    width:260px;
+
+    right:-80px;
+
+    top:-40px;
+
+}
+
+.step-cherries{
+
+    width:190px;
+
+    right:-30px;
+
+    top:40px;
+
+}
+
+
+}
+
+
+
+/*==================================================
+THE FINALE
+==================================================*/
+
+.prize{
+
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    padding:120px 32px;
+
+}
+
+.prize-wrapper{
+
+    position:relative;
+    max-width:1000px;
+    text-align:center;
+    z-index:2;
+
+}
+
+.prize-eyebrow{
+
+    display:block;
+    letter-spacing:8px;
+    font-size:.85rem;
+    color:var(--terracotta);
+    margin-bottom:30px;
+
+}
+
+.prize-title{
+
+    font-family:"Hoves Expanded";
+    font-size:clamp(7rem,18vw,13rem);
+    line-height:.82;
+    letter-spacing:-8px;
+    margin-bottom:28px;
+
+}
+
+.prize-subtitle{
+
+    font-family:"Hoves Expanded";
+    font-size:clamp(2rem,5vw,4rem);
+    line-height:1;
+    margin-bottom:30px;
+
+}
+
+.prize-copy{
+
+    max-width:560px;
+    margin:auto;
+    line-height:1.9;
+    opacity:.75;
+
+}
+
+.prize-seal{
+
+    position:absolute;
+    width:420px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    opacity:.05;
+    z-index:-1;
+
+}
+
+.prize-cherries{
+
+    position:absolute;
+    width:220px;
+    right:-60px;
+    top:-40px;
+
+}
+
+@media(max-width:768px){
+
+.prize-seal{
+
+width:260px;
+
+}
+
+.prize-cherries{
+
+width:150px;
+right:-20px;
+top:0;
+
+}
+
+}
