@@ -980,49 +980,57 @@ top:0;
 
 } 
 
-   /* ==========================================
-   MOBILE COMPACT LAYOUT
+
+}
+/* ==========================================
+   MOBILE OPTIMIZATION
 ========================================== */
 
 @media (max-width:768px){
 
-    /* Reduce la altura de todas las secciones */
-    section{
-        min-height:auto !important;
-        padding:80px 28px !important;
+    .intro{
+        min-height:65vh;
+        padding:60px 28px;
     }
 
-    /* El hero sigue ocupando la pantalla completa */
-    .hero{
-        min-height:100svh !important;
+    .number-panel{
+        min-height:60vh;
+        padding:60px 28px;
     }
 
-    /* Reduce espacio entre elementos */
-    h1,
-    h2,
-    h3{
-        margin-bottom:16px !important;
+    .how{
+        min-height:70vh;
+        padding:60px 28px;
     }
 
-    p{
-        margin-bottom:12px !important;
-        line-height:1.45;
+    .prize{
+        min-height:75vh;
+        padding:60px 28px;
     }
 
-    /* Todos los wrappers centrales */
-    .hero-content,
-    .numbers-content,
-    .experience-content,
-    .prize-wrapper{
-        gap:16px !important;
+    .hero-title{
+        margin-bottom:18px;
     }
 
-    /* Boleto */
+    .hero-description{
+        margin-bottom:8px;
+    }
+
+    .number-panel h2{
+        margin-bottom:14px;
+    }
+
+    .experience-title{
+        margin-bottom:18px;
+    }
+
+    .experience-text{
+        line-height:1.6;
+    }
+
     .prize-ticket{
-        width:300px;
-        margin:20px auto 16px auto !important;
+        width:290px;
+        margin:10px auto 8px;
     }
-
-}
 
 }
