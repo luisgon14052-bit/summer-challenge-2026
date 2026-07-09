@@ -874,7 +874,7 @@ THE FINALE
 
 .prize{
 
-    min-height:100vh;
+    min-height:80vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -899,7 +899,7 @@ THE FINALE
     letter-spacing:8px;
     font-size:.85rem;
     color:var(--terracotta);
-    margin-bottom:30px;
+    margin-bottom:14px;
 
 }
 
@@ -909,7 +909,7 @@ THE FINALE
     font-size:clamp(7rem,18vw,13rem);
     line-height:.82;
     letter-spacing:-8px;
-    margin-bottom:28px;
+    margin-bottom:12px;
 
 }
 
@@ -918,7 +918,7 @@ THE FINALE
     font-family:"Hoves Expanded";
     font-size:clamp(2rem,5vw,4rem);
     line-height:1;
-    margin-bottom:30px;
+    margin-bottom:16px;
 
 }
 
@@ -972,7 +972,7 @@ top:0;
 
     width:420px;
     display:block;
-    margin:0 auto 50px auto;
+    margin:0 auto 20px auto;
 
     filter:drop-shadow(0 20px 45px rgba(0,0,0,.12));
 
