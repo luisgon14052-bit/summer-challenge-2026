@@ -590,5 +590,18 @@ gsap.from(".prize-copy",{
         trigger:".prize",
         start:"top 70%"
     }
+gsap.from(".prize-ticket",{
 
+    y:-80,
+    rotation:-12,
+    opacity:0,
+    duration:1.2,
+    ease:"expo.out",
+
+    scrollTrigger:{
+        trigger:".prize",
+        start:"top 70%"
+    }
+
+})
 })
