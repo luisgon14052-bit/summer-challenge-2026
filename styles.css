@@ -980,4 +980,49 @@ top:0;
 
 } 
 
+   /* ==========================================
+   MOBILE COMPACT LAYOUT
+========================================== */
+
+@media (max-width:768px){
+
+    /* Reduce la altura de todas las secciones */
+    section{
+        min-height:auto !important;
+        padding:80px 28px !important;
+    }
+
+    /* El hero sigue ocupando la pantalla completa */
+    .hero{
+        min-height:100svh !important;
+    }
+
+    /* Reduce espacio entre elementos */
+    h1,
+    h2,
+    h3{
+        margin-bottom:16px !important;
+    }
+
+    p{
+        margin-bottom:12px !important;
+        line-height:1.45;
+    }
+
+    /* Todos los wrappers centrales */
+    .hero-content,
+    .numbers-content,
+    .experience-content,
+    .prize-wrapper{
+        gap:16px !important;
+    }
+
+    /* Boleto */
+    .prize-ticket{
+        width:300px;
+        margin:20px auto 16px auto !important;
+    }
+
+}
+
 }
