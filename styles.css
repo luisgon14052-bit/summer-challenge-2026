@@ -841,15 +841,18 @@ STEP DECORATIONS
 
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-.step-sun{
+.hero,
+.numbers,
+.experience,
+.prize{
 
-    width:260px;
+    min-height:auto;
 
-    right:-80px;
+    padding:80px 28px;
 
-    top:-40px;
+}
 
 }
 
