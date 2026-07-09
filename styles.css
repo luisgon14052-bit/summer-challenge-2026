@@ -968,4 +968,16 @@ top:0;
 
 }
 
+.prize-ticket{
+
+    width:420px;
+    display:block;
+    margin:0 auto 50px auto;
+
+    filter:drop-shadow(0 20px 45px rgba(0,0,0,.12));
+
+    transform:rotate(-4deg);
+
+} 
+
 }
